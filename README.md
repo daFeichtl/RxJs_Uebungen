@@ -1,2 +1,4 @@
 # RxJs_Uebungen
-Homework...
+## RIESN PFUSCH
+Use it at your own risk.
+It does work.
