@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="/node_modules/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+  <script src="/node_modules/@rgrueneis/rxjs-visualizer/rxjs.visualizer.umd.min.js"></script>
+</head>
+  <body>
+    <div class="bmi">
+      <h2>BMI Rechner</h2>
+      Weight: <val id="bmiWeight"></val>kg <br>
+      <input type="range" id="rngWeight" min="40" max="200" value="1"><br>
+      Height: <val id="bmiHeight"></val>cm <br>
+      <input type="range" id="rngHeight" min="140" max="250" value="1"><br>
+      BMI is <val id="bmiValue"></val>
+    </div>
+    <div class="webCascading">
+      <h2>Web Cascading</h2>
+      CommentId <val id="commentId"></val><br>
+        <input type="range" id="rngCommentId" min="0" max="499" value="0"><br>
+      Commented by <val id="commentUser"></val><br>
+    </div>
+    <div class="webParallel">
+      <h2>Web Parallel</h2>
+      <input type="range" id="rngParallel" max="10">
+      <h4>Album</h4>
+      <ul id="lstAlbums"></ul>
+
+      <h4>Todos</h4>
+      <ul id="lstTodos"></ul>
+    </div>
+    <div class="autocomplete">
+      <h2>Autcomplete</h2>
+      <p>Don't forget to start json server with <i>json-server --watch json/data.json</i> !</p>
+      <button id="toggle">Start</button>
+      Query for Persons
+      <input type="text" id="txtPerson">
+      <ul id="lstPersons"></ul>
+    </div>
+  </body>
+</html>
