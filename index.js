@@ -1,4 +1,3 @@
-
 window.onload = function (){
     const Rx = rxjs;
     const {
@@ -113,8 +112,12 @@ window.onload = function (){
                 map(e => e.target.value),
                 tap(x => {
                     clearAlbumsAndTodos();
-                    getAlbums(x).then(x => setAlbums(x))
-                    getTodos(x).then(x => setTodos(x))
+                    Rx.forkJoin(getAlbums(x), getTodos(x))
+                        .subscribe(x => {
+                            setAlbums(x[0]);
+                            setTodos(x[1]);
+                        })
+
                 })
             )
             .subscribe()
